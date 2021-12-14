@@ -23,15 +23,15 @@ namespace Logging
             divider.Calculate(int.MaxValue, 736954801, out milliseconds, new LoggsToConsoleProvider());
 
             // dividing with time calculation and logging in file
-            File.Delete(@"Logs.csv");
+            File.Delete(@"Logs.txt");
 
             divider.Calculate(int.MaxValue, 736954801, out milliseconds, new LogsToFileProvider());
-            divider.Calculate(int.MaxValue, 7, out milliseconds, new LogsToFileProvider());
+            divider.Calculate(int.MaxValue, 6, out milliseconds, new LogsToFileProvider());
             divider.Calculate(int.MaxValue, -896543, out milliseconds, new LogsToFileProvider());
 
             var psi = new ProcessStartInfo
             {
-                FileName = @"Logs.csv",
+                FileName = @"Logs.txt",
                 UseShellExecute = true
             };
 

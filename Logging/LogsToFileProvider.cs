@@ -4,13 +4,11 @@ namespace Logging
 {
     public class LogsToFileProvider : ILogsProvider
     {
-        public void Provide(int result, int milliseconds)
+        public void Provide(string message)
         {
-            string filePath = @"Logs.csv";
+            string filePath = @"Logs.txt";
 
-            string log = $"Calculation result: ; {result} ; time of calculation ; {milliseconds}";
-
-            File.AppendAllLines(filePath, new string[] { log });
+            File.AppendAllLines(filePath, new string[] { message });
         }
     }
 }

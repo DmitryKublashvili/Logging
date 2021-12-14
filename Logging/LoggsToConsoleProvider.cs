@@ -9,9 +9,9 @@ namespace Logging
         /// </summary>
         /// <param name="result"></param>
         /// <param name="milliseconds"></param>
-        public void Provide(int result, int milliseconds)
+        public void Provide(string message)
         {
-            Console.WriteLine("Calculation result: {0}, time of calculation {1}", result, milliseconds);
+            Console.WriteLine(message);
         }
     }
 }

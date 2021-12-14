@@ -51,7 +51,9 @@ namespace Logging
         {
             int result = Calculate(first, second, out milliseconds);
 
-            provider.Provide(second, milliseconds);
+            string log = $"Divisible: {first}, divider: {second}. Calculation result: {result}, time of calculation {milliseconds}";
+
+            provider.Provide(log);
 
             return result;
         }

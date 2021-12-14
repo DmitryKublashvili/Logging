@@ -5,6 +5,6 @@
     /// </summary>
     public interface ILogsProvider
     {
-        void Provide(int result, int milliseconds);
+        void Provide(string message);
     }
 }
